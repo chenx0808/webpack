@@ -10,5 +10,8 @@
   },
   "scripts": {
     "build": "webpack"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0"
   }
 }
