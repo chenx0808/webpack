@@ -36,10 +36,15 @@ module.exports = {
       {
         test: /\.(png|gif)/i,
         type: "asset",
-        parser: {
-          dataUrlCondition: {
-            maxSize: 2 * 1024,
-          },
+        generator: {
+          filename: "images/[hash:6][ext]",
+        },
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woof2)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[hash:6][ext]",
         },
       },
     ],
