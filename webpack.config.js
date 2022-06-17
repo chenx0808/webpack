@@ -27,8 +27,12 @@ module.exports = {
   module: {
     rules: [
       {
-        text: /\.css/i,
-        use:['css-loader']
+        test: /\.css/i,
+        use:['style-loader','css-loader']
+      },
+      {
+        test: /\.less/i,
+        use: ["style-loader", "css-loader", "less-loader"],
       },
     ],
   },
