@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const { VueLoaderPlugin } = require("vue-loader");
+
 const { join } = require("path");
 module.exports = {
   mode: "development",
@@ -18,6 +20,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, "public/index.html"),
     }),
+    new VueLoaderPlugin(),
   ],
   devServer: {
     open: true,
@@ -47,6 +50,15 @@ module.exports = {
           filename: "fonts/[hash:6][ext]",
         },
       },
+      {
+        test: /\.js$/i,
+        use: ["babel-loader"],
+      },
+      {
+        test: /\.vue$/i,
+        loader: "vue-loader",
+      },
+     
     ],
   },
 };

@@ -5,6 +5,9 @@
   "author": "chenx0808 <2264119591@qq.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "less": "^4.1.3",
     "less-loader": "^11.0.0",
@@ -18,6 +21,9 @@
     "server": "webpack server"
   },
   "dependencies": {
-    "html-webpack-plugin": "^5.5.0"
+    "html-webpack-plugin": "^5.5.0",
+    "vue": "^2.6.14",
+    "vue-loader": "15",
+    "vue-template-compiler": "^2.6.14"
   }
 }
