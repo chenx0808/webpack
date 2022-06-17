@@ -5,7 +5,7 @@ import APP from "./app.vue";
 
 marquee();
 tab();
-app();
+// app();
 
 import "./styles/index.css";
 import "./styles/index.less";
