@@ -1,4 +1,3 @@
-
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const { join } = require("path");
@@ -33,6 +32,10 @@ module.exports = {
       {
         test: /\.less/i,
         use: ["style-loader", "css-loader", "less-loader"],
+      },
+      {
+        test: /\.(png|gif)/i,
+        type: "asset/resource",
       },
     ],
   },
